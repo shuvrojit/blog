@@ -203,8 +203,43 @@ figcaption>p {
     font-size: 1.0rem;
 }
 
+.tag-tex {
+    font-weight: 800;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+}
+
+.tags>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tags>ul>li {
+    padding: 0 0.8rem;
+    list-style: none;
+}
+
+#TableOfContents>ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    border: 1px solid lightseagreen;
+    margin: 1rem auto;
+}
 
 
+pre {
+    padding: 1rem;
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 /*---------------------------*/
 /*------FOOTER SECTION------*/
 /*---------------------------*/
