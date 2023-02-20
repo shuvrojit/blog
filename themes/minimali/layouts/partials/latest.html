@@ -1,0 +1,5 @@
+{{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+<!-- <p>{{ .Summary }}</p> -->
+<br>
+{{ end }}

@@ -1,0 +1,38 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'duhh.tech'
+
+theme = "minimali"
+author = "Shuvrojit Biswas"
+
+# enableGitInfo = true
+
+[Author]
+name = "Shuvrojit Biswas"
+
+
+# [Params.source]
+# url = "https://gitlab.com/winny.tech/winny.tech"
+# commit_base = "https://gitlab.com/winny.tech/winny.tech/-/commit/"
+# md_dir = "content"
+# org_dir = "content-org"
+
+# [Params.paginate]
+# enable = false
+
+[Params]
+# coverPrefix = "/ox-hugo/"
+# googleAnalytics = "G-PF91Y99EEX"
+links = [
+      {url="https://twitter.com/shuv40", text="@shuv40"},
+      {url="https://blog.winny.tech/", text="Blog"},
+]
+
+[markup.goldmark.renderer]
+unsafe = true  # for #+html:
+
+# [build]
+# writeStats = true
+# 
+# [outputs]
+# home = ["HTML", "RSS", "JSON"]

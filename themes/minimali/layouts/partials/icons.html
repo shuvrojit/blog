@@ -1,0 +1,23 @@
+
+{{ if (eq (.Params.done) true) }}
+<li>
+  <a href="{{.Permalink}}">
+<i class="fa-solid fa-file-pen"></i> {{ .Title }}
+  </a>
+</li>
+
+{{ else if (eq (.Params.done) false) }}
+<li>
+  <a href="{{.Permalink}}">
+<i class="fa-solid fa-pen-to-square"></i> {{ .Title }}
+  </a>
+</li>
+
+{{ else }}
+<li>
+  <a href="{{.Permalink}}">
+<i class="fa-solid fa-pen-nib"></i> {{ .Title }}
+  </a>
+</li>
+
+{{ end }}
