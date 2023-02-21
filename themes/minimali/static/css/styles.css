@@ -223,6 +223,19 @@ figcaption>p {
     list-style: none;
 }
 
+.metadata {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.metadata p {
+    margin: 0.3rem 0;
+}
+
+.metadata:last-child {
+    font-style: italic;
+}
+
 #TableOfContents>ul {
     display: flex;
     flex-direction: column;
@@ -240,6 +253,37 @@ pre {
  white-space: -o-pre-wrap;    /* Opera 7 */
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+
+.nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3rem auto;
+}
+
+
+#myBtn {
+     height: 2.5rem;
+     width: 2.5rem;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 300px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 1rem; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
 /*---------------------------*/
 /*------FOOTER SECTION------*/
 /*---------------------------*/

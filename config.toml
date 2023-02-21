@@ -62,3 +62,7 @@ unsafe = true  # for #+html:
     noHl = false
     style = 'monokai'
     tabWidth = 4
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

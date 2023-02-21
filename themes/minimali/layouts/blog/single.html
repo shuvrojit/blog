@@ -2,7 +2,13 @@
 <div class="content">
   <article>
   <header>
-    <h1>{{ .Title }}</h1>
+    <h1 id="top" >{{ .Title }}</h1>
+
+    <div class="metadata">
+<p>Created: {{ .Date.Format "Mon Jan 2, 2006" }}</p>
+  <p>Last Modified: {{ .Lastmod.Format "Mon Jan 2, 2006 15:04" }}</p>
+  <p>{{ div .WordCount 240 }} minutes to read</p>
+
     <div class="tags">
       <span class="tag-text">Tags: </span>
 <ul>
@@ -10,6 +16,7 @@
         <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
     {{ end }}
 </ul>
+    </div>
     </div>
     {{ partial "toc.html" . }}
   </header>
@@ -19,28 +26,10 @@
   </main>
   </article>
 
-<aside id="meta">
-    <div>
-    <section>
-      <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-    </section>
-      {{ with .GetTerms "topics" }}
-        <ul id="topics">
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-          {{ end }}
-        </ul>
-      {{ end }}
-      {{ with .GetTerms "tags" }}
-        <ul id="tags">
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-          {{ end }}
-        </ul>
-      {{ end }}
-    </div>
-    <div>
+
+
+<aside>
+    <div class="nav-section">
         {{ with .PrevInSection }}
           <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
@@ -50,7 +39,11 @@
     </div>
 </aside>
 
+
 </div>
 
+ <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+        <script src="/js/index.js"></script>
 
 {{ end }}
