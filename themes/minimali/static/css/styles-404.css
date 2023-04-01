@@ -8,6 +8,9 @@ a {
     text-decoration: none;
 }
 
+body {
+    background-color: #F9F5EB;
+}
 
 #not-found {
     font-family: monospace;

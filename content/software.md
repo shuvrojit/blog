@@ -2,7 +2,7 @@
 title = "Software"
 author = ["Shuvrojit Biswas"]
 date = 2023-02-16
-lastmod = 2023-03-15T20:46:20+06:00
+lastmod = 2023-04-01T23:09:59+06:00
 draft = false
 weight = 1003
 +++
