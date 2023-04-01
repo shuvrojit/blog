@@ -43,29 +43,37 @@ table {
 * {
     --heading-font-size: 1.2rem;
     --heading-font-weight: 600;
-    --content-font-size: 1.1rem;
-    --content-h1-font-size: 1.8rem;
-    --content-h2-font-size: 1.4rem;
-    --content-h3-font-size: 1.2rem;
-    --content-h4-font-size: 1.0rem;
+    --content-font-size: 1.3rem;
+    --content-h1-font-size: 1.9rem;
+    --content-h2-font-size: 1.6rem;
+    --content-h3-font-size: 1.4rem;
+    --content-h4-font-size: 1.3rem;
 
 
 }
 
 
 body {
+    letter-spacing: 1px;
 	line-height: 1.5;
-    font-family: "Libre Franklin", "Noto sans", Lato, sans-serif;
-    background-color: lightblue;
+    font-family: Arial, "Libre Franklin", "Noto sans", Lato, sans-serif;
+    background-color: #F0EEED;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: var(--content-font-size);
+}
+
+li {
+    list-style-position: inside;
+    padding-left: 20px;
 }
 
 main a {
     text-decoration: none;
-    background-color: palegoldenrod;
+    background-color: #DFDFDE;
+;
 }
 
 
@@ -78,9 +86,11 @@ h2, h1, h3, h4 {
 
 h2 {
     font-size: var(--content-h2-font-size);
+    color: #464660;
 }
 
 h1 {
+    color: #434242;
     font-size: var(--content-h1-font-size);
 }
 
@@ -90,6 +100,33 @@ h3 {
 
 h4 {
     font-size: var(--content-h4-font-size);
+}
+
+.single-header {
+    min-width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem auto 0;
+    font-size: 1.5rem;
+}
+
+.toc-heading {
+    color: #22A39F;
+}
+.time-to-read {
+
+    font-size: 1.2rem;
+    color: #B22727;
+}
+
+.toc {
+    display: none;
+    transition: all .75s ease;
+}
+
+.toc-heading:hover {
+    cursor: pointer;
 }
 
 p {
@@ -104,7 +141,7 @@ p {
 .navbar {
     min-width: 60vw;
     max-width: 60vw;
-    margin: 3rem auto 1rem;
+    margin: 1rem auto 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -135,8 +172,6 @@ nav li {
 .main {
     /* max-width: 56vw; */
     /* margin: auto; */
-    font-size: var(--content-font-size);
-    letter-spacing: 0.3px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, minmax(10rem, auto));
@@ -179,7 +214,7 @@ nav li {
 /*----CONTENT SECTION-----*/
 /*------------------------*/
 .content {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 img {
@@ -232,26 +267,22 @@ figcaption>p {
     margin: 0.3rem 0;
 }
 
-.metadata:last-child {
-    font-style: italic;
-}
-
 #TableOfContents>ul {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    border: 1px solid lightseagreen;
-    margin: 1rem auto;
+    margin-left: 2rem;
 }
 
 
 pre {
     padding: 1rem;
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-break: break-all;
+
 }
 
 
@@ -264,7 +295,7 @@ pre {
 
 
 #myBtn {
-     height: 2.5rem;
+    height: 2.5rem;
      width: 2.5rem;
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -295,3 +326,62 @@ footer {
 
 }
 
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        min-width: 90vw;
+    }
+    .container {
+        min-width: 86vw;
+    }
+
+    .single-header {
+        min-width: 90vw;
+    }
+
+    #myBtn {
+        right: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        min-width: 86vw;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .main {
+        min-width: 90vw;
+
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, minmax(10rem, auto));
+    grid-template-areas:
+        "header"
+        "latestpost"
+        "post"
+        "productivity"
+        "tools"
+        "projects"
+        "contacts"
+    ;
+    justify-items: start;
+
+    overflow-wrap: break-word;
+    hyphens: manual;
+
+    }
+
+    #myBtn {
+        right: 35px;
+    }
+
+}
+
+
+#TableOfContents>ul>li {
+    list-style: armenian;
+    list-style-position: inside;
+    padding: 2px;
+}
