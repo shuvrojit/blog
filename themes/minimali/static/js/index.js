@@ -18,6 +18,19 @@ function topFunction() {
 }
 
 
-// addEventListener("wheel", (e) => {
-//     console.log(e.pageY)
-// })
+
+
+let tocHead = document.querySelector(".toc-heading")
+let toc = document.querySelector(".toc")
+
+
+tocHead.addEventListener("click", (e) => {
+    e.preventDefault();
+    if ((toc.style.getPropertyValue("display")) === "block") {
+        toc.style.display = "none";
+    } else {
+        toc.style.display = "block";
+    }
+
+
+})

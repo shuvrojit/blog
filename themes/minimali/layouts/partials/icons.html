@@ -1,5 +1,6 @@
 
 {{ if (eq (.Params.done) true) }}
+
 <li>
   <a href="{{.Permalink}}">
 <i class="fa-solid fa-file-pen"></i> {{ .Title }}
@@ -14,10 +15,13 @@
 </li>
 
 {{ else }}
+
 <li>
   <a href="{{.Permalink}}">
 <i class="fa-solid fa-pen-nib"></i> {{ .Title }}
   </a>
 </li>
 
+
 {{ end }}
+

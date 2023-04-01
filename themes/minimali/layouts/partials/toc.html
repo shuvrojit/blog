@@ -1,3 +1,6 @@
-<aside>
+{{ if and (gt .WordCount 1000 ) }}
+<h4 class="toc-heading">Table of Contents <i class="fa-solid fa-caret-down"></i></h4>
+<aside class="toc">
     {{.TableOfContents}}
 </aside>
+{{ end }}

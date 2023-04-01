@@ -11,7 +11,12 @@
 <link href="/css/styles.css" rel="stylesheet">
 </head>
     <body>
-        {{ partial "header.html" . }}
+      <!-- Only list and post pages should have Nav -->
+      {{ if (and (eq .IsPage true) (or (eq .Section "blog") (eq .Section "logs"))) }}
+      {{ partial "singlehead.html" .}}
+      {{ else }}
+      {{ partial "header.html" . }}
+      {{ end }}
         <div class="container">
         <main>
         {{ block "main" . }}{{ end }}
@@ -19,5 +24,5 @@
         </div>
         {{ partial "footer.html" . }}
 
-    </body>
+        </body>
 </html>

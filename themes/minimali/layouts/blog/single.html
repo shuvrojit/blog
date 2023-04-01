@@ -6,8 +6,8 @@
 
     <div class="metadata">
 <p>Created: {{ .Date.Format "Mon Jan 2, 2006" }}</p>
-  <p>Last Modified: {{ .Lastmod.Format "Mon Jan 2, 2006 15:04" }}</p>
-  <p>{{ div .WordCount 240 }} minutes to read</p>
+  <p>Last Modified: {{ .Lastmod.Format "Mon Jan 2, 2006" }}</p>
+  <p class="time-to-read">{{ div .WordCount 240 }} minutes to read</p>
 
     <div class="tags">
       <span class="tag-text">Tags: </span>
