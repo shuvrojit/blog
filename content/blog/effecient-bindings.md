@@ -2,7 +2,7 @@
 title = "Effecient Keybindings"
 author = ["Shuvrojit Biswas"]
 date = 2023-03-06
-lastmod = 2023-04-20T23:31:24+06:00
+lastmod = 2023-04-20T23:46:42+06:00
 tags = ["emacs"]
 categories = ["productivity"]
 draft = false

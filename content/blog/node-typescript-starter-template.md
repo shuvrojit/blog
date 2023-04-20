@@ -2,7 +2,7 @@
 title = "Node Typescript Starter Template"
 author = ["Shuvrojit Biswas"]
 date = 2023-04-20
-lastmod = 2023-04-20T23:31:24+06:00
+lastmod = 2023-04-20T23:46:42+06:00
 tags = ["node", "typescript", "eslint"]
 draft = false
 weight = 1002
@@ -109,8 +109,7 @@ Let's take a look  into our package.json file. We can see that all our packages 
 
 The first script will be a dev script which runs our application in development environment. We don't need the test one right now. So you can delete that line.
 
-```json
-
+```json { hl_lines=["7"] }
 {
   "name": "starter",
   "version": "1.0.0",
@@ -137,7 +136,7 @@ npm run dev
 
 Let's run our app. If you get an error, it's because of the comma at the end of our properties. In JSON the last property from any group doesn't have a comma. Let's remove the comma from there.
 
-```json
+```json { hl_lines=["7"] }
 {
   "name": "starter",
   "version": "1.0.0",
@@ -179,7 +178,7 @@ Create a `.prettierrc` file in project directory and add `{}` in there. It will 
 
 Edit the package.json file as follows.
 
-```json
+```json { hl_lines=["8"] }
 {
   "name": "starter",
   "version": "1.0.0",
@@ -237,3 +236,26 @@ About the rules section. There are a lot of rules for eslint. You can find them 
 ```
 
 Add this line after the format command.
+
+```json { hl_lines=["9"] }
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
+```

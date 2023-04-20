@@ -389,3 +389,10 @@ footer {
     list-style-position: inside;
     padding: 2px;
 }
+
+p > code {
+    font-family: monospace;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    background: white;
+}
