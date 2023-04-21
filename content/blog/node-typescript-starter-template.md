@@ -2,7 +2,7 @@
 title = "Node Typescript Starter Template"
 author = ["Shuvrojit Biswas"]
 date = 2023-04-20
-lastmod = 2023-04-20T23:46:42+06:00
+lastmod = 2023-04-21T18:05:54+06:00
 tags = ["node", "typescript", "eslint"]
 draft = false
 weight = 1002
@@ -10,7 +10,7 @@ weight = 1002
 
 Today we're going to create a node typescript setup or starter project.
 let's make a directory with `mkdir`. You can name it whatever you want.
-We're going to initialize git into this directory. Git is version control software which manages the working state of our application.
+We're going to initialize git into this directory. Git is version control software which manages the working state of our application. Here's the [link](https://github.com/shuvrojit/node-ts-starter) to the github repo.
 
 ```shell
 git init
@@ -68,7 +68,7 @@ Whenvever working with Javascript or Typescript application, it's good practice 
 mkdir src
 ```
 
-Let's create a new ts file called index.ts. We're going to write some code to see if it's working or not.
+Let's create a new ts file called index.ts. We're going to console log hello to see if it's working or not.
 
 ```shell
 touch src/index.ts
