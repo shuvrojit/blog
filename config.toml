@@ -22,10 +22,9 @@ name = "Shuvrojit Biswas"
 
 [Params]
 # coverPrefix = "/ox-hugo/"
-# googleAnalytics = "G-PF91Y99EEX"
+googleAnalytics = "G-6T5CCL4346"
 links = [
       {url="https://twitter.com/shuv40", text="@shuv40"},
-      {url="https://blog.winny.tech/", text="Blog"},
 ]
 
 [markup.goldmark.renderer]
