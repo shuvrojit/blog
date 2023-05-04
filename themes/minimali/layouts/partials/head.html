@@ -7,5 +7,17 @@
   <title>{{ .Site.Title }}</title>
 <script src="https://kit.fontawesome.com/f90e4f4a50.js" crossorigin="anonymous"></script>
 <link href="{{ $.Site.BaseURL }}css/styles.css" rel="stylesheet">
-{{ template "_internal/google_analytics_async.html" . }}
+
+  {{- if .Site.Params.googleAnalytics -}}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6T5CCL4346"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6T5CCL4346');
+</script>
+{{ end }}
+
 </head>
