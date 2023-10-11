@@ -1,8 +1,8 @@
 baseURL = 'https://duhh.tech'
 languageCode = 'en-us'
-title = 'duhh.tech'
+title = 'Shuvrojit Biswas'
 
-theme = "minimali"
+theme = "themes"
 author = "Shuvrojit Biswas"
 
 # enableGitInfo = true
