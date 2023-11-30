@@ -2,8 +2,11 @@ baseURL = 'https://duhh.tech'
 languageCode = 'en-us'
 title = 'Shuvrojit Biswas'
 
-theme = "simple-bw"
 author = "Shuvrojit Biswas"
+
+[module]
+[[module.imports]]
+    path = 'github.com/shuvrojit/simple-bw'
 
 # enableGitInfo = true
 
