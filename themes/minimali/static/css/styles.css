@@ -1,45 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Merriweather:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Merriweather:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-
 
 :root {
     --heading-font-size: 1.2rem;
@@ -49,27 +128,25 @@ table {
     --content-h2-font-size: 1.6rem;
     --content-h3-font-size: 1.4rem;
     --content-h4-font-size: 1.3rem;
-
-
 }
-
 
 body {
     letter-spacing: 1px;
-	line-height: 1.5;
+    line-height: 1.5;
     font-family: Arial, "Libre Franklin", "Noto sans", Lato, sans-serif;
-    background-color: #F9F5EB;
+    background-color: #d9ddb5;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     font-size: var(--content-font-size);
+    color: #3e3e3e;
 }
 
 a {
     text-decoration: none;
-    color: #002B5B;
+    color: #0c374d;
 }
 
 li {
@@ -78,17 +155,18 @@ li {
 }
 
 main a {
-    background-color: #E4DCCF;
+    background-color: #e4dccf;
 }
 
-
-
-h2, h1, h3, h4 {
+h2,
+h1,
+h3,
+h4 {
     font-family: "Merriweather";
     font-size: var(--heading-font-size);
     font-weight: var(--heading-font-weight);
     margin: 1.2rem 0;
-    color: #002B5B
+    color: #002b5b;
 }
 
 h2 {
@@ -119,17 +197,16 @@ h4 {
 }
 
 .toc-heading {
-    color: #22A39F;
+    color: #22a39f;
 }
 .time-to-read {
-
     font-size: 1.2rem;
-    color: #B22727;
+    color: #b22727;
 }
 
 .toc {
     display: none;
-    transition: all .75s ease;
+    transition: all 0.75s ease;
 }
 
 .toc-heading:hover {
@@ -144,7 +221,6 @@ p {
 /* ------HEADER SECTION----------- */
 /* ------------------------------ */
 
-
 .navbar {
     min-width: 60vw;
     max-width: 60vw;
@@ -154,7 +230,7 @@ p {
     justify-content: space-between;
     align-items: center;
 }
-nav>ul {
+nav > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -165,7 +241,6 @@ nav li {
     list-style: none;
     padding: 0 0.3rem;
 }
-
 
 /* ------------------------------- */
 /* ------HOME SECTION----------- */
@@ -186,14 +261,13 @@ nav li {
         "header header"
         "latestpost post"
         "productivity tools"
-        "projects contacts"
-    ;
+        "projects contacts";
     gap: 2rem 4rem;
     justify-items: start;
 }
 
 .main-content {
-    grid-area: header
+    grid-area: header;
 }
 
 .latest-post {
@@ -217,7 +291,6 @@ nav li {
     grid-area: contacts;
 }
 
-
 /*------------------------*/
 /*----CONTENT SECTION-----*/
 /*------------------------*/
@@ -234,7 +307,7 @@ figure {
     margin: 3rem 0;
 }
 
-figcaption>p {
+figcaption > p {
     font-size: 1rem;
     margin: 1rem auto;
     max-width: 25rem;
@@ -243,7 +316,7 @@ figcaption>p {
 .highlight {
     margin: 2rem 0;
     font-family: Hack;
-    font-size: 1.0rem;
+    font-size: 1rem;
 }
 
 .tag-tex {
@@ -253,18 +326,27 @@ figcaption>p {
 .tags {
     display: flex;
     flex-direction: row;
-    margin: 1rem 0 ;
+    margin: 1rem 0;
 }
 
-.tags>ul {
+.tags > ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
-.tags>ul>li {
+.tags > ul > li {
     padding: 0 0.8rem;
     list-style: none;
+}
+
+.tags > ul > li > a {
+    background-color: #e4dccf;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    margin: 0.2rem;
+    font-weight: 300;
+    text-transform: lowercase;
 }
 
 .metadata {
@@ -277,64 +359,74 @@ figcaption>p {
     margin: 0.3rem 0;
 }
 
-#TableOfContents>ul {
+#TableOfContents > ul {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
     margin-left: 2rem;
 }
 
-
 pre {
     padding: 1rem;
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
     word-break: break-all;
-
 }
-
 
 .nav-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin: 3rem auto;
+    gap: 1rem;
 }
 
+.nav-section > a:first-child::before {
+    content: "←";
+    margin-right: 0.5rem;
+}
+
+.nav-section > a:last-child::before {
+    content: "→";
+    margin-right: 0.5rem;
+}
 
 #myBtn {
     height: 2.5rem;
-     width: 2.5rem;
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 30px; /* Place the button at the bottom of the page */
-  right: 300px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  border-radius: 50px; /* Rounded corners */
-  font-size: 1rem; /* Increase font size */
+    width: 2.5rem;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 30px; /* Place the button at the bottom of the page */
+    right: 300px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 50px; /* Rounded corners */
+    font-size: 1rem; /* Increase font size */
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+    background-color: #555; /* Add a dark-grey background on hover */
 }
 
 /*---------------------------*/
 /*------FOOTER SECTION------*/
 /*---------------------------*/
 
-
 footer {
     max-width: 60vw;
     margin: 1rem auto 0.5rem;
 }
 
+footer > p {
+    font-size: 1rem;
+    text-align: center;
+}
 
 @media screen and (max-width: 1000px) {
     .navbar {
@@ -357,39 +449,34 @@ footer {
     .container {
         min-width: 86vw;
     }
-
 }
 @media screen and (max-width: 600px) {
     .main {
         min-width: 90vw;
 
         display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(7, minmax(10rem, auto));
-    grid-template-areas:
-        "header"
-        "latestpost"
-        "post"
-        "productivity"
-        "tools"
-        "projects"
-        "contacts"
-    ;
-    justify-items: start;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, minmax(10rem, auto));
+        grid-template-areas:
+            "header"
+            "latestpost"
+            "post"
+            "productivity"
+            "tools"
+            "projects"
+            "contacts";
+        justify-items: start;
 
-    overflow-wrap: break-word;
-    hyphens: manual;
-
+        overflow-wrap: break-word;
+        hyphens: manual;
     }
 
     #myBtn {
         right: 35px;
     }
-
 }
 
-
-#TableOfContents>ul>li {
+#TableOfContents > ul > li {
     list-style: armenian;
     list-style-position: inside;
     padding: 2px;
@@ -399,5 +486,5 @@ p > code {
     font-family: "Roboto Mono", monospace;
     letter-spacing: 2px;
     font-size: 1.2rem;
-    background: white;
+    background: #e2e1d6;
 }

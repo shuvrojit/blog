@@ -6,7 +6,6 @@
   align-items: center;
   /* position: fixed; */
   /* top: 0; */
-  background-color: #fff;
   z-index: 1000;
 }
 
@@ -73,7 +72,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
     display: none;
     z-index: 100;
     gap: 1rem;
