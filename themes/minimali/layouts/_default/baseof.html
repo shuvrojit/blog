@@ -3,7 +3,7 @@
         {{ partial "head.html" . }}
     <body>
       <!-- Only list and post pages should have Nav -->
-      {{ if (and (eq .IsPage true) (or (eq .Section "blog") (eq .Section "logs"))) }}
+      {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "logs"))) }}
       {{ partial "singlehead.html" .}}
       {{ else }}
       {{ partial "header.html" . }}

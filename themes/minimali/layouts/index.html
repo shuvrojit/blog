@@ -9,7 +9,7 @@
   <section class="latest-post">
     <h2>Latest Posts</h2>
 
-{{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+{{ range first 5 (where .Site.RegularPages "Section" "posts") }}
     {{ partial "icons.html" . }}
     {{ end }}
   </section>
