@@ -1,0 +1,42 @@
+{{ define "main"}}
+
+<div class="main">
+
+  <section class="main-content">
+{{ .Content }}
+  </section>
+
+  <section class="latest-post">
+    <h2>Latest Posts</h2>
+
+{{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+    {{ partial "icons.html" . }}
+    {{ end }}
+  </section>
+
+<section class="productivity">
+    <h2>Productivity</h2>
+{{ with .Site.GetPage "/productivity.md" }} {{ .Content }} {{ end }}
+  </section>
+
+<section class="tools">
+
+    <h2>Tools I Use</h2>
+
+{{ with .Site.GetPage "/software.md" }} {{ .Content }} {{ end }}
+  </section>
+
+
+  <section class="projects">
+    <h2>Projects</h2>
+{{ with .Site.GetPage "/projects.md" }} {{ .Content }} {{ end }}
+  </section>
+
+  <section class="contacts">
+    <h2>Contacts</h2>
+{{ with .Site.GetPage "/contacts.md" }} {{ .Content }} {{ end }}
+  </section>
+
+</div>
+
+{{ end }}

@@ -1,0 +1,49 @@
+{{ define "main" }}
+<div class="content">
+  <article>
+  <header>
+    <h1 id="top" >{{ .Title }}</h1>
+
+    <div class="metadata">
+<p>Created: {{ .Date.Format "Mon Jan 2, 2006" }}</p>
+  <p>Last Modified: {{ .Lastmod.Format "Mon Jan 2, 2006" }}</p>
+  <p class="time-to-read">{{ div .WordCount 240 }} minutes to read</p>
+
+    <div class="tags">
+      <span class="tag-text">Tags: </span>
+<ul>
+    {{ range (.GetTerms "tags") }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+</ul>
+    </div>
+    </div>
+    {{ partial "toc.html" . }}
+  </header>
+
+  <main>
+{{ .Content }}
+  </main>
+  </article>
+
+
+
+<aside>
+    <div class="nav-section">
+        {{ with .PrevInSection }}
+          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+    </div>
+</aside>
+
+
+</div>
+
+ <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+        <script src="/js/index.js"></script>
+
+{{ end }}

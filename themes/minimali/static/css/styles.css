@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root {
+    --heading-font-size: 1.2rem;
+    --heading-font-weight: 600;
+    --content-font-size: 1.3rem;
+    --content-h1-font-size: 1.9rem;
+    --content-h2-font-size: 1.6rem;
+    --content-h3-font-size: 1.4rem;
+    --content-h4-font-size: 1.3rem;
+
+
+}
+
+
+body {
+    letter-spacing: 1px;
+	line-height: 1.5;
+    font-family: Arial, "Libre Franklin", "Noto sans", Lato, sans-serif;
+    background-color: #F9F5EB;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: var(--content-font-size);
+}
+
+a {
+    text-decoration: none;
+    color: #002B5B;
+}
+
+li {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+main a {
+    background-color: #E4DCCF;
+}
+
+
+
+h2, h1, h3, h4 {
+    font-family: "Merriweather";
+    font-size: var(--heading-font-size);
+    font-weight: var(--heading-font-weight);
+    margin: 1.2rem 0;
+    color: #002B5B
+}
+
+h2 {
+    font-size: var(--content-h2-font-size);
+    color: #464660;
+}
+
+h1 {
+    color: #434242;
+    font-size: var(--content-h1-font-size);
+}
+
+h3 {
+    font-size: var(--content-h3-font-size);
+}
+
+h4 {
+    font-size: var(--content-h4-font-size);
+}
+
+.single-header {
+    min-width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem auto 0;
+    font-size: 1.5rem;
+}
+
+.toc-heading {
+    color: #22A39F;
+}
+.time-to-read {
+
+    font-size: 1.2rem;
+    color: #B22727;
+}
+
+.toc {
+    display: none;
+    transition: all .75s ease;
+}
+
+.toc-heading:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+/* ------------------------------- */
+/* ------HEADER SECTION----------- */
+/* ------------------------------ */
+
+
+.navbar {
+    min-width: 60vw;
+    max-width: 60vw;
+    margin: 1rem auto 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+nav li {
+    list-style: none;
+    padding: 0 0.3rem;
+}
+
+
+/* ------------------------------- */
+/* ------HOME SECTION----------- */
+/* ------------------------------ */
+
+.container {
+    max-width: 56vw;
+    margin: auto;
+}
+
+.main {
+    /* max-width: 56vw; */
+    /* margin: auto; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, minmax(10rem, auto));
+    grid-template-areas:
+        "header header"
+        "latestpost post"
+        "productivity tools"
+        "projects contacts"
+    ;
+    gap: 2rem 4rem;
+    justify-items: start;
+}
+
+.main-content {
+    grid-area: header
+}
+
+.latest-post {
+    grid-area: latestpost;
+}
+
+.productivity {
+    grid-area: productivity;
+}
+
+.tools {
+    grid-area: tools;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.contacts {
+    grid-area: contacts;
+}
+
+
+/*------------------------*/
+/*----CONTENT SECTION-----*/
+/*------------------------*/
+.content {
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 56vw;
+    margin: 1.2rem auto 0;
+}
+
+figure {
+    margin: 3rem 0;
+}
+
+figcaption>p {
+    font-size: 1rem;
+    margin: 1rem auto;
+    max-width: 25rem;
+}
+
+.highlight {
+    margin: 2rem 0;
+    font-family: Hack;
+    font-size: 1.0rem;
+}
+
+.tag-tex {
+    font-weight: 800;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+}
+
+.tags>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tags>ul>li {
+    padding: 0 0.8rem;
+    list-style: none;
+}
+
+.metadata {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.metadata p {
+    margin: 0.3rem 0;
+}
+
+#TableOfContents>ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-left: 2rem;
+}
+
+
+pre {
+    padding: 1rem;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-break: break-all;
+
+}
+
+
+.nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3rem auto;
+}
+
+
+#myBtn {
+    height: 2.5rem;
+     width: 2.5rem;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 300px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 50px; /* Rounded corners */
+  font-size: 1rem; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*---------------------------*/
+/*------FOOTER SECTION------*/
+/*---------------------------*/
+
+
+footer {
+    max-width: 60vw;
+    margin: 1rem auto 0.5rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        min-width: 90vw;
+    }
+    .container {
+        min-width: 86vw;
+    }
+
+    .single-header {
+        min-width: 90vw;
+    }
+
+    #myBtn {
+        right: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        min-width: 86vw;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .main {
+        min-width: 90vw;
+
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, minmax(10rem, auto));
+    grid-template-areas:
+        "header"
+        "latestpost"
+        "post"
+        "productivity"
+        "tools"
+        "projects"
+        "contacts"
+    ;
+    justify-items: start;
+
+    overflow-wrap: break-word;
+    hyphens: manual;
+
+    }
+
+    #myBtn {
+        right: 35px;
+    }
+
+}
+
+
+#TableOfContents>ul>li {
+    list-style: armenian;
+    list-style-position: inside;
+    padding: 2px;
+}
+
+p > code {
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    background: white;
+}
