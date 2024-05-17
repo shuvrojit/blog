@@ -63,6 +63,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     font-size: var(--content-font-size);
 }
 
@@ -196,7 +197,8 @@ nav li {
 }
 
 .latest-post {
-    grid-area: latestpost;
+    grid-area: latestpost latestpost;
+    grid-column: 1 / span 3;
 }
 
 .productivity {
@@ -251,6 +253,7 @@ figcaption>p {
 .tags {
     display: flex;
     flex-direction: row;
+    margin: 1rem 0 ;
 }
 
 .tags>ul {
@@ -267,6 +270,7 @@ figcaption>p {
 .metadata {
     font-size: 1rem;
     font-weight: 600;
+    margin: 2rem 0 4rem;
 }
 
 .metadata p {
