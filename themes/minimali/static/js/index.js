@@ -34,3 +34,18 @@ tocHead.addEventListener("click", (e) => {
 
 
 })
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+  const navList = document.getElementById('nav-list');
+
+  hamburgerMenu.addEventListener('click', () => {
+    console.log("hello")
+    navList.classList.toggle('open');
+    hamburgerMenu.querySelector('.bar1').classList.toggle('change');
+    hamburgerMenu.querySelector('.bar2').classList.toggle('change');
+    hamburgerMenu.querySelector('.bar3').classList.toggle('change');
+  });
+// });
