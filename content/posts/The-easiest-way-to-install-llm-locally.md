@@ -2,15 +2,11 @@
 title = "The easiest way to run llm locally on your own machine"
 author = ["Shuvrojit Biswas"]
 date = 2024-05-17
-lastmod = 2024-05-17T22:37:02+06:00
+lastmod = 2024-05-17T22:56:04+06:00
 tags = ["machine-learning", "artificial-intelligence"]
 categories = ["AI"]
 draft = false
 weight = 1001
-[menu]
-  [menu.main]
-    weight = 1001
-    identifier = "the-easiest-way-to-run-llm-locally-on-your-own-machine"
 +++
 
 Welcome! This guide will walk you through the easiest way to run Ollama on your local machine. Ollama is a powerful tool for running your ml models locally. It also creates a webserver for us to connect with. Normally when you’re trying to run a llm model such as llama3 from meta, you will need to go through a verification process in order to download the models from the official website. You can also get it from huggingface community. But with ollama we don’t need to do anything, just install it and download a model and run it.
